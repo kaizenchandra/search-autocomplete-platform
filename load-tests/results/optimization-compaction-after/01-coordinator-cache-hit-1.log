@@ -1,0 +1,85 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Volumes/KaizenChandra/Workspace/01-Interview/system-design/system-design/search-autocomplete-platform/load-tests/autocomplete.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 300 max VUs, 6s max duration (incl. graceful stop):
+              * search: 1.00 iterations/s for 1s (maxVUs: 100-300, gracefulStop: 5s)
+
+
+running (1.0s), 000/100 VUs, 1 complete and 0 interrupted iterations
+search   [  99% ] 000/100 VUs  1.0s/1s  1.00 iters/s
+
+
+  █ THRESHOLDS 
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+    response_status{status:0}
+    ✓ 'count>=0' count=0
+
+    response_status{status:200}
+    ✓ 'count>=0' count=2
+
+    response_status{status:429}
+    ✓ 'count>=0' count=0
+
+    response_status{status:500}
+    ✓ 'count>=0' count=0
+
+    response_status{status:503}
+    ✓ 'count>=0' count=0
+
+    successful_latency
+    ✓ 'p(99)<50' p(99)=5.7ms
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 4       3.968545/s
+    checks_succeeded...: 100.00% 4 out of 4
+    checks_failed......: 0.00%   0 out of 4
+
+    ✓ bounded valid response
+    ✓ status 200
+
+    CUSTOM
+    response_status................: 2      1.984273/s
+      { status:0 }.................: 0      0/s
+      { status:200 }...............: 2      1.984273/s
+      { status:429 }...............: 0      0/s
+      { status:500 }...............: 0      0/s
+      { status:503 }...............: 0      0/s
+    successful_latency.............: avg=4.49ms min=3.26ms med=4.49ms p(95)=5.61ms p(99)=5.7ms  max=5.73ms
+    successful_requests............: 2      1.984273/s
+    zero_results...................: 0.00%  0 out of 2
+
+    HTTP
+    http_req_duration..............: avg=4.49ms min=3.26ms med=4.49ms p(95)=5.61ms p(99)=5.7ms  max=5.73ms
+      { expected_response:true }...: avg=4.49ms min=3.26ms med=4.49ms p(95)=5.61ms p(99)=5.7ms  max=5.73ms
+    http_req_failed................: 0.00%  0 out of 2
+    http_reqs......................: 2      1.984273/s
+
+    EXECUTION
+    iteration_duration.............: avg=5.38ms min=4.05ms med=5.38ms p(95)=6.59ms p(99)=6.69ms max=6.72ms
+    iterations.....................: 2      1.984273/s
+    vus............................: 0      min=0      max=0  
+    vus_max........................: 100    min=100    max=100
+
+    NETWORK
+    data_received..................: 3.3 kB 3.3 kB/s
+    data_sent......................: 304 B  302 B/s
+
+
+
+
+running (1.0s), 000/100 VUs, 2 complete and 0 interrupted iterations
+search ✓ [ 100% ] 000/100 VUs  1s  1.00 iters/s

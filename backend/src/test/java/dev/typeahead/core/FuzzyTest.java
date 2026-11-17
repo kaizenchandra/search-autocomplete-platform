@@ -1,0 +1,11 @@
+package dev.typeahead.core;
+import org.junit.jupiter.api.Test;import java.util.*;import static org.junit.jupiter.api.Assertions.*;
+class FuzzyTest {
+ Term term(String id,String text,long p){return new Term(id,"public",text,"QUERY","tech","en",true,p,0);}
+ @Test void substitutionInsertionDeletionAndUnicode(){var index=new TrieIndex(List.of(term("1","Spring Boot",10),term("2","東京カフェ案内",5)));for(String q:List.of("sprong","spriing","sprng"))assertEquals("Spring Boot",index.fuzzy(q,10,20000,50_000_000).getFirst().text());assertEquals("東京カフェ案内",index.fuzzy("東京カへェ",10,20000,50_000_000).getFirst().text());}
+ @Test void boundsAndNoUnrelatedResults(){var index=new TrieIndex(List.of(term("1","Spring Boot",10)));assertTrue(index.fuzzy("sp",10).isEmpty());assertTrue(index.fuzzy("xxxx",10).isEmpty());assertTrue(index.fuzzy("sprong",10,1,50_000_000).isEmpty());assertThrows(IllegalArgumentException.class,()->index.fuzzy("spring",21));}
+ @Test void policyOrdering(){var low=term("1","Spring one",9999);var high=new Term("2","public","Spring two","QUERY","tech","en",true,0,5);assertEquals("1",new TrieIndex(List.of(low,high)).prefix("spr",1).getFirst().id());assertEquals("2",new TrieIndex(List.of(low,high),0).prefix("spr",1).getFirst().id());}
+ private int distance(String a,String b){int[] row=new int[b.length()+1];for(int j=0;j<row.length;j++)row[j]=j;for(int i=1;i<=a.length();i++){int prev=row[0];row[0]=i;for(int j=1;j<=b.length();j++){int old=row[j];row[j]=Math.min(Math.min(row[j]+1,row[j-1]+1),prev+(a.charAt(i-1)==b.charAt(j-1)?0:1));prev=old;}}return row[b.length()];}
+ @Test void fuzzyMatchesBoundedReference(){Random random=new Random(82);List<Term> terms=new ArrayList<>();for(int i=0;i<250;i++){StringBuilder text=new StringBuilder();for(int j=0;j<8;j++)text.append((char)('a'+random.nextInt(4)));terms.add(term("r"+i,text.toString(),i));}var index=new TrieIndex(terms);for(int n=0;n<25;n++){String query=terms.get(n).text().substring(0,5);Map<String,Term> unique=new HashMap<>();for(Term t:terms){boolean match=false;for(int len=4;len<=6;len++)if(distance(query,t.text().substring(0,len))<=1)match=true;if(match)unique.merge(t.text(),t,(a,b)->TrieIndex.ORDER.compare(a,b)<0?a:b);}assertEquals(unique.values().stream().sorted(TrieIndex.ORDER).limit(10).toList(),index.fuzzy(query,10,20000,50_000_000));}}
+
+}

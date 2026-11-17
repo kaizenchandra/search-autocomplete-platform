@@ -1,0 +1,8 @@
+{
+  "exact_local_vs_remote_comparisons": 6,
+  "unauthorized_internal_status": 403,
+  "worker_public_partial_status": 503,
+  "paused_worker_uncached_status": 503,
+  "fault_response_ms": 192.05508300001384,
+  "worker_resumed": true
+}

@@ -1,0 +1,12 @@
+import {cpSync,existsSync,mkdirSync} from 'node:fs';
+import {spawn} from 'node:child_process';
+const args=process.argv.slice(2);const position=args.indexOf('--port');
+const port=position<0?(process.env.PORT||'3000'):args[position+1];
+if(!/^\d+$/.test(port||'') || Number(port)<1 || Number(port)>65535)throw new Error('Invalid port');
+mkdirSync('.next/standalone/.next',{recursive:true});
+cpSync('.next/static','.next/standalone/.next/static',{recursive:true});
+if(existsSync('public'))cpSync('public','.next/standalone/public',{recursive:true});
+const child=spawn(process.execPath,['.next/standalone/server.js'],{stdio:'inherit',env:{...process.env,PORT:port,HOSTNAME:'0.0.0.0'}});
+for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>child.kill(signal));
+child.on('error',error=>{console.error(error.message);process.exitCode=1;});
+child.on('exit',code=>{process.exitCode=code??1;});

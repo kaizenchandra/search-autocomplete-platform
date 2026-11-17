@@ -1,0 +1,86 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Volumes/KaizenChandra/Workspace/01-Interview/system-design/system-design/search-autocomplete-platform/load-tests/autocomplete.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 300 max VUs, 6s max duration (incl. graceful stop):
+              * search: 500.00 iterations/s for 1s (maxVUs: 100-300, gracefulStop: 5s)
+
+
+running (1.0s), 003/100 VUs, 488 complete and 0 interrupted iterations
+search   [  98% ] 003/100 VUs  1.0s/1s  500.00 iters/s
+
+
+  █ THRESHOLDS 
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+    response_status{status:0}
+    ✓ 'count>=0' count=0
+
+    response_status{status:200}
+    ✓ 'count>=0' count=501
+
+    response_status{status:429}
+    ✓ 'count>=0' count=0
+
+    response_status{status:500}
+    ✓ 'count>=0' count=0
+
+    response_status{status:503}
+    ✓ 'count>=0' count=0
+
+    successful_latency
+    ✗ 'p(99)<50' p(99)=129.93ms
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 1002    995.991185/s
+    checks_succeeded...: 100.00% 1002 out of 1002
+    checks_failed......: 0.00%   0 out of 1002
+
+    ✓ bounded valid response
+    ✓ status 200
+
+    CUSTOM
+    response_status................: 501    497.995593/s
+      { status:0 }.................: 0      0/s
+      { status:200 }...............: 501    497.995593/s
+      { status:429 }...............: 0      0/s
+      { status:500 }...............: 0      0/s
+      { status:503 }...............: 0      0/s
+    successful_latency.............: avg=23.39ms min=1.71ms med=15.02ms p(95)=76.09ms p(99)=129.93ms max=145ms   
+    successful_requests............: 501    497.995593/s
+    zero_results...................: 0.00%  0 out of 501
+
+    HTTP
+    http_req_duration..............: avg=23.39ms min=1.71ms med=15.02ms p(95)=76.09ms p(99)=129.93ms max=145ms   
+      { expected_response:true }...: avg=23.39ms min=1.71ms med=15.02ms p(95)=76.09ms p(99)=129.93ms max=145ms   
+    http_req_failed................: 0.00%  0 out of 501
+    http_reqs......................: 501    497.995593/s
+
+    EXECUTION
+    iteration_duration.............: avg=24.04ms min=1.83ms med=15.58ms p(95)=76.33ms p(99)=132.03ms max=145.13ms
+    iterations.....................: 501    497.995593/s
+    vus............................: 3      min=3        max=3  
+    vus_max........................: 100    min=100      max=100
+
+    NETWORK
+    data_received..................: 834 kB 829 kB/s
+    data_sent......................: 76 kB  76 kB/s
+
+
+
+
+running (1.0s), 000/100 VUs, 501 complete and 0 interrupted iterations
+search ✓ [ 100% ] 000/100 VUs  1s  500.00 iters/s
+time="2026-11-17T19:06:35+05:30" level=error msg="thresholds on metrics 'successful_latency' have been crossed"

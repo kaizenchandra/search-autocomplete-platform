@@ -1,0 +1,37 @@
+{
+  "artifact_sha256": "8f66a9fd9685c62f60cb7ff244f0295557042680457403a6fb9e357612008f16",
+  "base_port": 33240,
+  "roles": {
+    "worker0": {
+      "pid": 46855,
+      "url": "http://127.0.0.1:33241",
+      "initial_version": 1287
+    },
+    "worker1": {
+      "pid": 46856,
+      "url": "http://127.0.0.1:33242",
+      "initial_version": 1287
+    },
+    "coordinator": {
+      "pid": 46857,
+      "url": "http://127.0.0.1:33240",
+      "initial_version": 1287
+    },
+    "local": {
+      "pid": 46858,
+      "url": "http://127.0.0.1:33243",
+      "initial_version": 1287
+    }
+  },
+  "heap": "512m per JVM",
+  "shards": 2,
+  "rate_limit_rps": 10000,
+  "burst": 10000,
+  "host": {
+    "os": "macOS arm64",
+    "memory_bytes": 19327352832,
+    "logical_cpus": 11,
+    "java": "21.0.13.0.3",
+    "k6": "2.4.0"
+  }
+}

@@ -1,0 +1,16 @@
+
+Running 5 tests using 3 workers
+
+(node:46557) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:46556) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:46555) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 tests/search.spec.ts:2:1 › real API suggestions and keyboard selection (1.4s)
+  ✓  1 tests/admin.spec.ts:2:1 › admin create edit deactivate delete import ranking rebuild and rollback controls (1.5s)
+  ✓  2 tests/privacy.spec.ts:2:1 › analytics is opt-in, sends approved IDs, separates selection and submit, and supports erasure (1.7s)
+  ✓  4 tests/search.spec.ts:3:1 › older responses cannot replace current input (1.8s)
+  ✓  5 tests/search.spec.ts:4:1 › mobile touch selection and escape (890ms)
+
+  5 passed (4.8s)

@@ -1,0 +1,113 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Volumes/KaizenChandra/Workspace/01-Interview/system-design/system-design/search-autocomplete-platform/load-tests/autocomplete.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 300 max VUs, 15s max duration (incl. graceful stop):
+              * search: 1000.00 iterations/s for 10s (maxVUs: 100-300, gracefulStop: 5s)
+
+
+running (01.0s), 001/100 VUs, 991 complete and 0 interrupted iterations
+search   [  10% ] 001/100 VUs  01.0s/10s  1000.00 iters/s
+
+running (02.0s), 000/100 VUs, 1992 complete and 0 interrupted iterations
+search   [  20% ] 000/100 VUs  02.0s/10s  1000.00 iters/s
+
+running (03.0s), 005/100 VUs, 2987 complete and 0 interrupted iterations
+search   [  30% ] 005/100 VUs  03.0s/10s  1000.00 iters/s
+
+running (04.0s), 003/100 VUs, 3990 complete and 0 interrupted iterations
+search   [  40% ] 003/100 VUs  04.0s/10s  1000.00 iters/s
+
+running (05.0s), 000/100 VUs, 4992 complete and 0 interrupted iterations
+search   [  50% ] 000/100 VUs  05.0s/10s  1000.00 iters/s
+
+running (06.0s), 002/100 VUs, 5991 complete and 0 interrupted iterations
+search   [  60% ] 002/100 VUs  06.0s/10s  1000.00 iters/s
+
+running (07.0s), 002/100 VUs, 6991 complete and 0 interrupted iterations
+search   [  70% ] 002/100 VUs  07.0s/10s  1000.00 iters/s
+
+running (08.0s), 006/101 VUs, 7859 complete and 0 interrupted iterations
+search   [  80% ] 006/101 VUs  08.0s/10s  1000.00 iters/s
+
+running (09.0s), 001/101 VUs, 8863 complete and 0 interrupted iterations
+search   [  90% ] 001/101 VUs  09.0s/10s  1000.00 iters/s
+
+running (10.0s), 004/101 VUs, 9861 complete and 0 interrupted iterations
+search   [ 100% ] 004/101 VUs  10.0s/10s  1000.00 iters/s
+
+
+  █ THRESHOLDS 
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+    response_status{status:0}
+    ✓ 'count>=0' count=0
+
+    response_status{status:200}
+    ✓ 'count>=0' count=9874
+
+    response_status{status:429}
+    ✓ 'count>=0' count=0
+
+    response_status{status:500}
+    ✓ 'count>=0' count=0
+
+    response_status{status:503}
+    ✓ 'count>=0' count=0
+
+    successful_latency
+    ✓ 'p(99)<50' p(99)=47.43ms
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 19748   1973.682106/s
+    checks_succeeded...: 100.00% 19748 out of 19748
+    checks_failed......: 0.00%   0 out of 19748
+
+    ✓ bounded valid response
+    ✓ status 200
+
+    CUSTOM
+    response_status................: 9874   986.841053/s
+      { status:0 }.................: 0      0/s
+      { status:200 }...............: 9874   986.841053/s
+      { status:429 }...............: 0      0/s
+      { status:500 }...............: 0      0/s
+      { status:503 }...............: 0      0/s
+    successful_latency.............: avg=3.87ms min=276µs    med=1.23ms p(95)=10.89ms p(99)=47.43ms  max=171.12ms
+    successful_requests............: 9874   986.841053/s
+    zero_results...................: 0.00%  0 out of 9874
+
+    HTTP
+    http_req_duration..............: avg=3.87ms min=276µs    med=1.23ms p(95)=10.89ms p(99)=47.43ms  max=171.12ms
+      { expected_response:true }...: avg=3.87ms min=276µs    med=1.23ms p(95)=10.89ms p(99)=47.43ms  max=171.12ms
+    http_req_failed................: 0.00%  0 out of 9874
+    http_reqs......................: 9874   986.841053/s
+
+    EXECUTION
+    dropped_iterations.............: 128    12.792754/s
+    iteration_duration.............: avg=4.22ms min=357.62µs med=1.46ms p(95)=11.22ms p(99)=107.25ms max=206.38ms
+    iterations.....................: 9874   986.841053/s
+    vus............................: 4      min=0         max=5  
+    vus_max........................: 101    min=100       max=101
+
+    NETWORK
+    data_received..................: 16 MB  1.6 MB/s
+    data_sent......................: 1.5 MB 150 kB/s
+
+
+
+
+running (10.0s), 000/101 VUs, 9874 complete and 0 interrupted iterations
+search ✓ [ 100% ] 000/101 VUs  10s  1000.00 iters/s

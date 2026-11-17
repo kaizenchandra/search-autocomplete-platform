@@ -1,0 +1,242 @@
+[
+  {
+    "time": 1794922166.812683,
+    "pid": 48673,
+    "rss_kib": 84944,
+    "lifetime_cpu_percent": 1.6
+  },
+  {
+    "time": 1794922166.812692,
+    "pid": 48674,
+    "rss_kib": 73296,
+    "lifetime_cpu_percent": 1.0
+  },
+  {
+    "time": 1794922166.8126929,
+    "pid": 48675,
+    "rss_kib": 78896,
+    "lifetime_cpu_percent": 0.9
+  },
+  {
+    "time": 1794922166.8126929,
+    "pid": 48676,
+    "rss_kib": 323392,
+    "lifetime_cpu_percent": 50.5
+  },
+  {
+    "time": 1794922167.925112,
+    "pid": 48673,
+    "rss_kib": 43232,
+    "lifetime_cpu_percent": 2.1
+  },
+  {
+    "time": 1794922167.925117,
+    "pid": 48674,
+    "rss_kib": 39920,
+    "lifetime_cpu_percent": 0.9
+  },
+  {
+    "time": 1794922167.925117,
+    "pid": 48675,
+    "rss_kib": 39264,
+    "lifetime_cpu_percent": 1.6
+  },
+  {
+    "time": 1794922167.925117,
+    "pid": 48676,
+    "rss_kib": 259152,
+    "lifetime_cpu_percent": 55.1
+  },
+  {
+    "time": 1794922168.942488,
+    "pid": 48673,
+    "rss_kib": 37312,
+    "lifetime_cpu_percent": 0.8
+  },
+  {
+    "time": 1794922168.942493,
+    "pid": 48674,
+    "rss_kib": 35376,
+    "lifetime_cpu_percent": 1.4
+  },
+  {
+    "time": 1794922168.942494,
+    "pid": 48675,
+    "rss_kib": 31744,
+    "lifetime_cpu_percent": 0.2
+  },
+  {
+    "time": 1794922168.942494,
+    "pid": 48676,
+    "rss_kib": 270608,
+    "lifetime_cpu_percent": 76.8
+  },
+  {
+    "time": 1794922169.956567,
+    "pid": 48673,
+    "rss_kib": 37904,
+    "lifetime_cpu_percent": 0.5
+  },
+  {
+    "time": 1794922169.9565709,
+    "pid": 48674,
+    "rss_kib": 41280,
+    "lifetime_cpu_percent": 1.3
+  },
+  {
+    "time": 1794922169.9565718,
+    "pid": 48675,
+    "rss_kib": 32400,
+    "lifetime_cpu_percent": 0.2
+  },
+  {
+    "time": 1794922169.9565718,
+    "pid": 48676,
+    "rss_kib": 225440,
+    "lifetime_cpu_percent": 40.2
+  },
+  {
+    "time": 1794922170.975052,
+    "pid": 48673,
+    "rss_kib": 40720,
+    "lifetime_cpu_percent": 0.3
+  },
+  {
+    "time": 1794922170.975061,
+    "pid": 48674,
+    "rss_kib": 38976,
+    "lifetime_cpu_percent": 1.1
+  },
+  {
+    "time": 1794922170.9750621,
+    "pid": 48675,
+    "rss_kib": 32192,
+    "lifetime_cpu_percent": 0.2
+  },
+  {
+    "time": 1794922170.9750621,
+    "pid": 48676,
+    "rss_kib": 286448,
+    "lifetime_cpu_percent": 34.5
+  },
+  {
+    "time": 1794922171.9991722,
+    "pid": 48673,
+    "rss_kib": 38592,
+    "lifetime_cpu_percent": 0.7
+  },
+  {
+    "time": 1794922171.999176,
+    "pid": 48674,
+    "rss_kib": 34176,
+    "lifetime_cpu_percent": 0.1
+  },
+  {
+    "time": 1794922171.999177,
+    "pid": 48675,
+    "rss_kib": 35584,
+    "lifetime_cpu_percent": 0.2
+  },
+  {
+    "time": 1794922171.999177,
+    "pid": 48676,
+    "rss_kib": 295408,
+    "lifetime_cpu_percent": 49.7
+  },
+  {
+    "time": 1794922173.01007,
+    "pid": 48673,
+    "rss_kib": 36912,
+    "lifetime_cpu_percent": 0.5
+  },
+  {
+    "time": 1794922173.010085,
+    "pid": 48674,
+    "rss_kib": 33488,
+    "lifetime_cpu_percent": 0.3
+  },
+  {
+    "time": 1794922173.0100858,
+    "pid": 48675,
+    "rss_kib": 34432,
+    "lifetime_cpu_percent": 0.4
+  },
+  {
+    "time": 1794922173.010087,
+    "pid": 48676,
+    "rss_kib": 261456,
+    "lifetime_cpu_percent": 32.1
+  },
+  {
+    "time": 1794922174.020542,
+    "pid": 48673,
+    "rss_kib": 90400,
+    "lifetime_cpu_percent": 10.5
+  },
+  {
+    "time": 1794922174.0205529,
+    "pid": 48674,
+    "rss_kib": 30976,
+    "lifetime_cpu_percent": 0.4
+  },
+  {
+    "time": 1794922174.020554,
+    "pid": 48675,
+    "rss_kib": 32816,
+    "lifetime_cpu_percent": 0.3
+  },
+  {
+    "time": 1794922174.020554,
+    "pid": 48676,
+    "rss_kib": 234272,
+    "lifetime_cpu_percent": 32.5
+  },
+  {
+    "time": 1794922175.033822,
+    "pid": 48673,
+    "rss_kib": 68160,
+    "lifetime_cpu_percent": 0.9
+  },
+  {
+    "time": 1794922175.033835,
+    "pid": 48674,
+    "rss_kib": 79152,
+    "lifetime_cpu_percent": 2.2
+  },
+  {
+    "time": 1794922175.033835,
+    "pid": 48675,
+    "rss_kib": 30304,
+    "lifetime_cpu_percent": 0.8
+  },
+  {
+    "time": 1794922175.033835,
+    "pid": 48676,
+    "rss_kib": 245552,
+    "lifetime_cpu_percent": 33.0
+  },
+  {
+    "time": 1794922176.053419,
+    "pid": 48673,
+    "rss_kib": 68752,
+    "lifetime_cpu_percent": 1.1
+  },
+  {
+    "time": 1794922176.0534232,
+    "pid": 48674,
+    "rss_kib": 75488,
+    "lifetime_cpu_percent": 0.4
+  },
+  {
+    "time": 1794922176.0534241,
+    "pid": 48675,
+    "rss_kib": 41888,
+    "lifetime_cpu_percent": 1.8
+  },
+  {
+    "time": 1794922176.0534241,
+    "pid": 48676,
+    "rss_kib": 240784,
+    "lifetime_cpu_percent": 26.4
+  }
+]

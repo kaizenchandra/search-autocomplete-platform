@@ -1,0 +1,113 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Volumes/KaizenChandra/Workspace/01-Interview/system-design/system-design/search-autocomplete-platform/load-tests/autocomplete.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 300 max VUs, 15s max duration (incl. graceful stop):
+              * search: 500.00 iterations/s for 10s (maxVUs: 100-300, gracefulStop: 5s)
+
+
+running (01.0s), 005/100 VUs, 483 complete and 0 interrupted iterations
+search   [  10% ] 005/100 VUs  01.0s/10s  500.00 iters/s
+
+running (02.0s), 036/100 VUs, 952 complete and 0 interrupted iterations
+search   [  20% ] 036/100 VUs  02.0s/10s  500.00 iters/s
+
+running (03.0s), 004/100 VUs, 1484 complete and 0 interrupted iterations
+search   [  30% ] 004/100 VUs  03.0s/10s  500.00 iters/s
+
+running (04.0s), 002/100 VUs, 1986 complete and 0 interrupted iterations
+search   [  40% ] 002/100 VUs  04.0s/10s  500.00 iters/s
+
+running (05.0s), 017/100 VUs, 2473 complete and 0 interrupted iterations
+search   [  50% ] 017/100 VUs  05.0s/10s  500.00 iters/s
+
+running (06.0s), 006/100 VUs, 2982 complete and 0 interrupted iterations
+search   [  60% ] 006/100 VUs  06.0s/10s  500.00 iters/s
+
+running (07.0s), 001/100 VUs, 3487 complete and 0 interrupted iterations
+search   [  70% ] 001/100 VUs  07.0s/10s  500.00 iters/s
+
+running (08.0s), 001/100 VUs, 3987 complete and 0 interrupted iterations
+search   [  80% ] 001/100 VUs  08.0s/10s  500.00 iters/s
+
+running (09.0s), 020/100 VUs, 4468 complete and 0 interrupted iterations
+search   [  90% ] 020/100 VUs  09.0s/10s  500.00 iters/s
+
+running (10.0s), 013/100 VUs, 4977 complete and 0 interrupted iterations
+search   [ 100% ] 013/100 VUs  10.0s/10s  500.00 iters/s
+
+
+  █ THRESHOLDS 
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+    response_status{status:0}
+    ✓ 'count>=0' count=0
+
+    response_status{status:200}
+    ✓ 'count>=0' count=5002
+
+    response_status{status:429}
+    ✓ 'count>=0' count=0
+
+    response_status{status:500}
+    ✓ 'count>=0' count=0
+
+    response_status{status:503}
+    ✓ 'count>=0' count=0
+
+    successful_latency
+    ✗ 'p(99)<50' p(99)=71.84ms
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 10004   999.160142/s
+    checks_succeeded...: 100.00% 10004 out of 10004
+    checks_failed......: 0.00%   0 out of 10004
+
+    ✓ bounded valid response
+    ✓ status 200
+
+    CUSTOM
+    response_status................: 5002   499.580071/s
+      { status:0 }.................: 0      0/s
+      { status:200 }...............: 5002   499.580071/s
+      { status:429 }...............: 0      0/s
+      { status:500 }...............: 0      0/s
+      { status:503 }...............: 0      0/s
+    successful_latency.............: avg=14.03ms min=925µs  med=8.13ms p(95)=47ms    p(99)=71.84ms max=135.99ms
+    successful_requests............: 5002   499.580071/s
+    zero_results...................: 0.00%  0 out of 5002
+
+    HTTP
+    http_req_duration..............: avg=14.03ms min=925µs  med=8.13ms p(95)=47ms    p(99)=71.84ms max=135.99ms
+      { expected_response:true }...: avg=14.03ms min=925µs  med=8.13ms p(95)=47ms    p(99)=71.84ms max=135.99ms
+    http_req_failed................: 0.00%  0 out of 5002
+    http_reqs......................: 5002   499.580071/s
+
+    EXECUTION
+    iteration_duration.............: avg=14.34ms min=1.01ms med=8.41ms p(95)=47.35ms p(99)=72.13ms max=136.24ms
+    iterations.....................: 5002   499.580071/s
+    vus............................: 8      min=1         max=38 
+    vus_max........................: 100    min=100       max=100
+
+    NETWORK
+    data_received..................: 2.8 MB 277 kB/s
+    data_sent......................: 775 kB 77 kB/s
+
+
+
+
+running (10.0s), 000/100 VUs, 5002 complete and 0 interrupted iterations
+search ✓ [ 100% ] 000/100 VUs  10s  500.00 iters/s
+time="2026-11-17T18:11:42+05:30" level=error msg="thresholds on metrics 'successful_latency' have been crossed"

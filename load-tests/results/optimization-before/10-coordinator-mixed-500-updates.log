@@ -1,0 +1,130 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Volumes/KaizenChandra/Workspace/01-Interview/system-design/system-design/search-autocomplete-platform/load-tests/autocomplete.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 300 max VUs, 20s max duration (incl. graceful stop):
+              * search: 500.00 iterations/s for 15s (maxVUs: 100-300, gracefulStop: 5s)
+
+
+running (01.0s), 002/100 VUs, 493 complete and 0 interrupted iterations
+search   [   7% ] 002/100 VUs  01.0s/15s  500.00 iters/s
+
+running (02.0s), 002/100 VUs, 993 complete and 0 interrupted iterations
+search   [  13% ] 002/100 VUs  02.0s/15s  500.00 iters/s
+
+running (03.0s), 001/100 VUs, 1494 complete and 0 interrupted iterations
+search   [  20% ] 001/100 VUs  03.0s/15s  500.00 iters/s
+
+running (04.0s), 003/100 VUs, 1992 complete and 0 interrupted iterations
+search   [  27% ] 003/100 VUs  04.0s/15s  500.00 iters/s
+
+running (05.0s), 001/100 VUs, 2494 complete and 0 interrupted iterations
+search   [  33% ] 001/100 VUs  05.0s/15s  500.00 iters/s
+
+running (06.0s), 002/100 VUs, 2994 complete and 0 interrupted iterations
+search   [  40% ] 002/100 VUs  06.0s/15s  500.00 iters/s
+
+running (07.0s), 086/100 VUs, 3411 complete and 0 interrupted iterations
+search   [  47% ] 086/100 VUs  07.0s/15s  500.00 iters/s
+
+running (08.0s), 060/104 VUs, 3922 complete and 0 interrupted iterations
+search   [  53% ] 060/104 VUs  08.0s/15s  500.00 iters/s
+
+running (09.0s), 002/104 VUs, 4478 complete and 0 interrupted iterations
+search   [  60% ] 002/104 VUs  09.0s/15s  500.00 iters/s
+
+running (10.0s), 001/112 VUs, 4968 complete and 0 interrupted iterations
+search   [  67% ] 001/112 VUs  10.0s/15s  500.00 iters/s
+
+running (11.0s), 010/112 VUs, 5457 complete and 0 interrupted iterations
+search   [  73% ] 010/112 VUs  11.0s/15s  500.00 iters/s
+
+running (12.0s), 080/128 VUs, 5870 complete and 0 interrupted iterations
+search   [  80% ] 080/128 VUs  12.0s/15s  500.00 iters/s
+
+running (13.0s), 001/128 VUs, 6449 complete and 0 interrupted iterations
+search   [  87% ] 001/128 VUs  13.0s/15s  500.00 iters/s
+
+running (14.0s), 004/128 VUs, 6946 complete and 0 interrupted iterations
+search   [  93% ] 004/128 VUs  14.0s/15s  500.00 iters/s
+
+running (15.0s), 001/128 VUs, 7449 complete and 0 interrupted iterations
+search   [ 100% ] 001/128 VUs  15.0s/15s  500.00 iters/s
+
+
+  █ THRESHOLDS 
+
+    http_req_failed
+    ✗ 'rate<0.01' rate=15.13%
+
+    response_status{status:0}
+    ✓ 'count>=0' count=0
+
+    response_status{status:200}
+    ✓ 'count>=0' count=6326
+
+    response_status{status:429}
+    ✓ 'count>=0' count=0
+
+    response_status{status:500}
+    ✓ 'count>=0' count=0
+
+    response_status{status:503}
+    ✓ 'count>=0' count=1128
+
+    successful_latency
+    ✗ 'p(99)<50' p(99)=171.77ms
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 13780  918.246049/s
+    checks_succeeded...: 91.81% 12652 out of 13780
+    checks_failed......: 8.18%  1128 out of 13780
+
+    ✓ bounded valid response
+    ✗ status 200
+      ↳  84% — ✓ 6326 / ✗ 1128
+
+    CUSTOM
+    response_status................: 7454   496.705809/s
+      { status:0 }.................: 0      0/s
+      { status:200 }...............: 6326   421.54024/s
+      { status:429 }...............: 0      0/s
+      { status:500 }...............: 0      0/s
+      { status:503 }...............: 1128   75.165569/s
+    successful_latency.............: avg=15.76ms min=346µs    med=3.13ms p(95)=96.23ms  p(99)=171.77ms max=246.09ms
+    successful_requests............: 6326   421.54024/s
+    zero_results...................: 0.00%  0 out of 6326
+
+    HTTP
+    http_req_duration..............: avg=34.28ms min=346µs    med=4.44ms p(95)=180.82ms p(99)=232.78ms max=341.31ms
+      { expected_response:true }...: avg=15.76ms min=346µs    med=3.13ms p(95)=96.23ms  p(99)=171.77ms max=246.09ms
+    http_req_failed................: 15.13% 1128 out of 7454
+    http_reqs......................: 7454   496.705809/s
+
+    EXECUTION
+    dropped_iterations.............: 45     2.998626/s
+    iteration_duration.............: avg=34.76ms min=397.25µs med=4.87ms p(95)=181.91ms p(99)=233.81ms max=341.67ms
+    iterations.....................: 7454   496.705809/s
+    vus............................: 1      min=1            max=83 
+    vus_max........................: 128    min=100          max=128
+
+    NETWORK
+    data_received..................: 9.5 MB 635 kB/s
+    data_sent......................: 1.1 MB 74 kB/s
+
+
+
+
+running (15.0s), 000/128 VUs, 7454 complete and 0 interrupted iterations
+search ✓ [ 100% ] 000/128 VUs  15s  500.00 iters/s
+time="2026-11-17T19:00:56+05:30" level=error msg="thresholds on metrics 'http_req_failed, successful_latency' have been crossed"

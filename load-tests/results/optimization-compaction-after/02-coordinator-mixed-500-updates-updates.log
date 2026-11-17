@@ -1,0 +1,1 @@
+{"requested_update_rps": 20, "committed_updates": 559, "elapsed_seconds": 30.065276790999633, "achieved_update_rps": 18.592877221318073, "commit_p50_ms": 3.7635000007867347, "commit_p99_ms": 33.96937499928754, "visibility_samples": 29, "not_visible_within_3s": 0, "visibility_completed_p50_ms": 459.99591600048007, "visibility_completed_max_ms": 735.8267919989885}

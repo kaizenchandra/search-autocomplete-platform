@@ -1,0 +1,48 @@
+{
+  "before": [
+    {
+      "stage": "compaction.locked",
+      "duration_ms": 8411.965167,
+      "thread": "scheduling-1",
+      "start": "2026-11-17T19:06:59.458448750+05:30"
+    }
+  ],
+  "after": [
+    {
+      "stage": "compaction.export",
+      "duration_ms": 85.21991600000001,
+      "thread": "index-compactor",
+      "start": "2026-11-17T19:24:15.151079125+05:30"
+    },
+    {
+      "stage": "compaction.build",
+      "duration_ms": 430.535917,
+      "thread": "index-compactor",
+      "start": "2026-11-17T19:24:15.236426291+05:30"
+    },
+    {
+      "stage": "compaction.persist",
+      "duration_ms": 151.651,
+      "thread": "index-compactor",
+      "start": "2026-11-17T19:24:15.667001458+05:30"
+    },
+    {
+      "stage": "compaction.export",
+      "duration_ms": 81.18525,
+      "thread": "index-compactor",
+      "start": "2026-11-17T19:24:28.757061458+05:30"
+    },
+    {
+      "stage": "compaction.build",
+      "duration_ms": 332.829416,
+      "thread": "index-compactor",
+      "start": "2026-11-17T19:24:28.838305750+05:30"
+    },
+    {
+      "stage": "compaction.persist",
+      "duration_ms": 131.367333,
+      "thread": "index-compactor",
+      "start": "2026-11-17T19:24:29.171148958+05:30"
+    }
+  ]
+}

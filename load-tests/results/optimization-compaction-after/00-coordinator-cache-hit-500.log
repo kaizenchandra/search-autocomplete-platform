@@ -1,0 +1,85 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Volumes/KaizenChandra/Workspace/01-Interview/system-design/system-design/search-autocomplete-platform/load-tests/autocomplete.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 300 max VUs, 6s max duration (incl. graceful stop):
+              * search: 500.00 iterations/s for 1s (maxVUs: 100-300, gracefulStop: 5s)
+
+
+running (1.0s), 001/100 VUs, 490 complete and 0 interrupted iterations
+search   [  98% ] 001/100 VUs  1.0s/1s  500.00 iters/s
+
+
+  █ THRESHOLDS 
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+    response_status{status:0}
+    ✓ 'count>=0' count=0
+
+    response_status{status:200}
+    ✓ 'count>=0' count=501
+
+    response_status{status:429}
+    ✓ 'count>=0' count=0
+
+    response_status{status:500}
+    ✓ 'count>=0' count=0
+
+    response_status{status:503}
+    ✓ 'count>=0' count=0
+
+    successful_latency
+    ✓ 'p(99)<50' p(99)=6.45ms
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 1002    997.708854/s
+    checks_succeeded...: 100.00% 1002 out of 1002
+    checks_failed......: 0.00%   0 out of 1002
+
+    ✓ bounded valid response
+    ✓ status 200
+
+    CUSTOM
+    response_status................: 501    498.854427/s
+      { status:0 }.................: 0      0/s
+      { status:200 }...............: 501    498.854427/s
+      { status:429 }...............: 0      0/s
+      { status:500 }...............: 0      0/s
+      { status:503 }...............: 0      0/s
+    successful_latency.............: avg=1.55ms min=777µs    med=1.28ms p(95)=2.85ms p(99)=6.45ms max=10.12ms
+    successful_requests............: 501    498.854427/s
+    zero_results...................: 0.00%  0 out of 501
+
+    HTTP
+    http_req_duration..............: avg=1.55ms min=777µs    med=1.28ms p(95)=2.85ms p(99)=6.45ms max=10.12ms
+      { expected_response:true }...: avg=1.55ms min=777µs    med=1.28ms p(95)=2.85ms p(99)=6.45ms max=10.12ms
+    http_req_failed................: 0.00%  0 out of 501
+    http_reqs......................: 501    498.854427/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.72ms min=864.91µs med=1.39ms p(95)=3.16ms p(99)=7.53ms max=14.32ms
+    iterations.....................: 501    498.854427/s
+    vus............................: 1      min=1        max=1  
+    vus_max........................: 100    min=100      max=100
+
+    NETWORK
+    data_received..................: 834 kB 830 kB/s
+    data_sent......................: 76 kB  76 kB/s
+
+
+
+
+running (1.0s), 000/100 VUs, 501 complete and 0 interrupted iterations
+search ✓ [ 100% ] 000/100 VUs  1s  500.00 iters/s

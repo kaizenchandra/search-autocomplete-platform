@@ -1,0 +1,50 @@
+[
+  {
+    "time": 1794923639.95403,
+    "pid": 51857,
+    "rss_kib": 217392,
+    "lifetime_cpu_percent": 5.8
+  },
+  {
+    "time": 1794923639.954033,
+    "pid": 51858,
+    "rss_kib": 198928,
+    "lifetime_cpu_percent": 6.2
+  },
+  {
+    "time": 1794923639.9540339,
+    "pid": 51859,
+    "rss_kib": 356800,
+    "lifetime_cpu_percent": 143.9
+  },
+  {
+    "time": 1794923639.9540339,
+    "pid": 51860,
+    "rss_kib": 113104,
+    "lifetime_cpu_percent": 7.0
+  },
+  {
+    "time": 1794923640.968253,
+    "pid": 51857,
+    "rss_kib": 198336,
+    "lifetime_cpu_percent": 12.2
+  },
+  {
+    "time": 1794923640.968261,
+    "pid": 51858,
+    "rss_kib": 183360,
+    "lifetime_cpu_percent": 11.6
+  },
+  {
+    "time": 1794923640.968261,
+    "pid": 51859,
+    "rss_kib": 325104,
+    "lifetime_cpu_percent": 3.4
+  },
+  {
+    "time": 1794923640.968262,
+    "pid": 51860,
+    "rss_kib": 114352,
+    "lifetime_cpu_percent": 0.5
+  }
+]

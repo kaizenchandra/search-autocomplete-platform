@@ -1,0 +1,1 @@
+import AutocompleteSearch from '../../components/AutocompleteSearch';export default function Page(){return <main><div className="eyebrow">CURATED DISCOVERY</div><h1>Find your<br/><em>everyday essentials.</em></h1><p className="intro">Explore the electronics catalog. Try “iph”.</p><AutocompleteSearch category="electronics"/></main>}

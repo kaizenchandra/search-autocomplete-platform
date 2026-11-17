@@ -1,0 +1,812 @@
+{
+  "00-local-cache-hit-500": {
+    "stages_over_1ms": {},
+    "monitor_events": {},
+    "cpu_samples": 4,
+    "top_inclusive_frames": [
+      [
+        "java/lang/Thread.run",
+        1
+      ],
+      [
+        "java/lang/Thread.runWith",
+        1
+      ],
+      [
+        "io/netty/util/HashedWheelTimer$Worker.run",
+        1
+      ],
+      [
+        "io/netty/util/concurrent/FastThreadLocalRunnable.run",
+        1
+      ],
+      [
+        "org/springframework/jdbc/datasource/DataSourceUtils.doGetConnection",
+        1
+      ],
+      [
+        "ch/qos/logback/classic/Logger.log",
+        1
+      ],
+      [
+        "org/apache/commons/logging/impl/Slf4jLogFactory$Slf4jLocationAwareLog.log",
+        1
+      ],
+      [
+        "org/apache/commons/logging/impl/Slf4jLogFactory$Slf4jLocationAwareLog.debug",
+        1
+      ],
+      [
+        "ch/qos/logback/classic/Logger.filterAndLog_0_Or3Plus",
+        1
+      ],
+      [
+        "org/postgresql/jdbc/PgStatement.createResultSet",
+        1
+      ],
+      [
+        "org/postgresql/jdbc/PgStatement$StatementResultHandler.handleResultRows",
+        1
+      ],
+      [
+        "org/postgresql/core/v3/QueryExecutorImpl.processResults",
+        1
+      ],
+      [
+        "org/postgresql/core/v3/QueryExecutorImpl.execute",
+        1
+      ],
+      [
+        "org/postgresql/jdbc/PgResultSet.<init>",
+        1
+      ],
+      [
+        "jdk/jfr/internal/periodic/FlushTask.execute",
+        1
+      ],
+      [
+        "jdk/jfr/internal/PlatformRecorder.periodicTask",
+        1
+      ],
+      [
+        "jdk/jfr/internal/PlatformRecorder.lambda$startDiskMonitor$1",
+        1
+      ],
+      [
+        "jdk/jfr/internal/periodic/PeriodicEvents.doPeriodic",
+        1
+      ],
+      [
+        "jdk/jfr/internal/periodic/PeriodicTask.run",
+        1
+      ]
+    ],
+    "park_top_frames": []
+  },
+  "01-local-cache-miss-500": {
+    "stages_over_1ms": {},
+    "monitor_events": {},
+    "cpu_samples": 5,
+    "top_inclusive_frames": [
+      [
+        "io/micrometer/observation/SimpleObservation.start",
+        1
+      ],
+      [
+        "io/micrometer/observation/SimpleObservation.notifyOnObservationStarted",
+        1
+      ],
+      [
+        "io/micrometer/observation/ObservationHandler$FirstMatchingCompositeObservationHandler.onStart",
+        1
+      ],
+      [
+        "io/micrometer/core/instrument/Timer.start",
+        1
+      ],
+      [
+        "io/micrometer/core/instrument/observation/DefaultMeterObservationHandler.onStart",
+        1
+      ],
+      [
+        "org/postgresql/jdbc/PgConnection.isValid",
+        1
+      ],
+      [
+        "org/postgresql/jdbc/PgStatement.executeWithFlags",
+        1
+      ],
+      [
+        "org/postgresql/jdbc/PgStatement.executeCachedSql",
+        1
+      ],
+      [
+        "com/zaxxer/hikari/pool/PoolBase.isConnectionDead",
+        1
+      ],
+      [
+        "java/util/concurrent/ScheduledThreadPoolExecutor$DelayedWorkQueue.take",
+        1
+      ],
+      [
+        "java/util/concurrent/locks/AbstractQueuedSynchronizer$ConditionObject.unlinkCancelledWaiters",
+        1
+      ],
+      [
+        "java/util/concurrent/ThreadPoolExecutor.getTask",
+        1
+      ],
+      [
+        "java/util/concurrent/locks/AbstractQueuedSynchronizer$ConditionObject.awaitNanos",
+        1
+      ],
+      [
+        "org/postgresql/core/VisibleBufferedInputStream.readMore",
+        1
+      ],
+      [
+        "java/net/Socket.getInetAddress",
+        1
+      ],
+      [
+        "java/net/Socket$SocketInputStream.read",
+        1
+      ],
+      [
+        "org/postgresql/core/VisibleBufferedInputStream.ensureBytes",
+        1
+      ],
+      [
+        "java/util/concurrent/Executors$RunnableAdapter.call",
+        1
+      ],
+      [
+        "java/util/concurrent/ThreadPoolExecutor.runWorker",
+        1
+      ],
+      [
+        "java/util/concurrent/FutureTask.runAndReset",
+        1
+      ]
+    ],
+    "park_top_frames": []
+  },
+  "02-local-short-prefix-500": {
+    "stages_over_1ms": {},
+    "monitor_events": {},
+    "cpu_samples": 0,
+    "top_inclusive_frames": [],
+    "park_top_frames": []
+  },
+  "03-local-fuzzy-500": {
+    "stages_over_1ms": {},
+    "monitor_events": {},
+    "cpu_samples": 3,
+    "top_inclusive_frames": [
+      [
+        "com/zaxxer/hikari/pool/HikariPool.getConnection",
+        1
+      ],
+      [
+        "com/zaxxer/hikari/pool/ProxyFactory.getProxyConnection",
+        1
+      ],
+      [
+        "com/zaxxer/hikari/pool/PoolEntry.createProxyConnection",
+        1
+      ],
+      [
+        "com/zaxxer/hikari/pool/HikariProxyConnection.<init>",
+        1
+      ],
+      [
+        "java/util/concurrent/ScheduledThreadPoolExecutor$DelayedWorkQueue.finishPoll",
+        1
+      ],
+      [
+        "java/util/concurrent/ScheduledThreadPoolExecutor$ScheduledFutureTask.compareTo",
+        1
+      ],
+      [
+        "java/util/concurrent/ScheduledThreadPoolExecutor$DelayedWorkQueue.siftDown",
+        1
+      ],
+      [
+        "java/util/concurrent/ScheduledThreadPoolExecutor$DelayedWorkQueue.take",
+        1
+      ],
+      [
+        "jdk/jfr/internal/periodic/FlushTask.execute",
+        1
+      ],
+      [
+        "jdk/jfr/internal/PlatformRecorder.periodicTask",
+        1
+      ],
+      [
+        "jdk/jfr/internal/PlatformRecorder.lambda$startDiskMonitor$1",
+        1
+      ],
+      [
+        "jdk/jfr/internal/periodic/PeriodicEvents.doPeriodic",
+        1
+      ],
+      [
+        "jdk/jfr/internal/periodic/PeriodicTask.run",
+        1
+      ]
+    ],
+    "park_top_frames": []
+  },
+  "04-coordinator-cache-hit-500": {
+    "stages_over_1ms": {},
+    "monitor_events": {
+      "[I": {
+        "count": 1,
+        "sum_ms": 10.878292,
+        "p50_ms": 10.878292,
+        "p99_ms": 10.878292,
+        "max_ms": 10.878292
+      }
+    },
+    "cpu_samples": 9,
+    "top_inclusive_frames": [
+      [
+        "java/util/concurrent/ConcurrentHashMap.putIfAbsent",
+        2
+      ],
+      [
+        "java/lang/ClassLoader.getClassLoadingLock",
+        2
+      ],
+      [
+        "java/util/concurrent/ConcurrentHashMap.putVal",
+        2
+      ],
+      [
+        "jdk/internal/loader/BuiltinClassLoader.loadClassOrNull",
+        1
+      ],
+      [
+        "java/lang/ClassLoader.loadClass",
+        1
+      ],
+      [
+        "org/springframework/boot/loader/net/protocol/jar/JarUrlClassLoader.loadClass",
+        1
+      ],
+      [
+        "java/util/concurrent/ConcurrentLinkedDeque.pollFirst",
+        1
+      ],
+      [
+        "tools/jackson/core/TokenStreamFactory._createContext",
+        1
+      ],
+      [
+        "tools/jackson/core/TokenStreamFactory._getBufferRecycler",
+        1
+      ],
+      [
+        "tools/jackson/core/util/RecyclerPool.acquireAndLinkPooled",
+        1
+      ],
+      [
+        "tools/jackson/core/util/RecyclerPool$ConcurrentDequePoolBase.acquirePooled",
+        1
+      ],
+      [
+        "java/lang/StringLatin1.regionMatchesCI",
+        1
+      ],
+      [
+        "org/springframework/boot/loader/net/protocol/jar/Handler.parseURL",
+        1
+      ],
+      [
+        "java/net/URL.<init>",
+        1
+      ],
+      [
+        "java/lang/String.regionMatches",
+        1
+      ],
+      [
+        "java/lang/Class.getSimpleName0",
+        1
+      ],
+      [
+        "org/springframework/web/servlet/mvc/method/annotation/AbstractMessageConverterMethodArgumentResolver.validateIfApplicable",
+        1
+      ],
+      [
+        "java/lang/Class.getSimpleName",
+        1
+      ],
+      [
+        "org/springframework/validation/annotation/ValidationAnnotationUtils.determineValidationHints",
+        1
+      ],
+      [
+        "org/springframework/web/servlet/mvc/method/annotation/RequestResponseBodyMethodProcessor.resolveArgument",
+        1
+      ]
+    ],
+    "park_top_frames": []
+  },
+  "05-coordinator-cache-miss-500": {
+    "stages_over_1ms": {},
+    "monitor_events": {
+      "dev/typeahead/Corpus": {
+        "count": 56,
+        "sum_ms": 1900.057455,
+        "p50_ms": 32.135791,
+        "p99_ms": 70.29275,
+        "max_ms": 70.29275
+      },
+      "org/apache/coyote/AbstractProtocol$RecycledProcessors": {
+        "count": 1,
+        "sum_ms": 11.785375,
+        "p50_ms": 11.785375,
+        "p99_ms": 11.785375,
+        "max_ms": 11.785375
+      }
+    },
+    "cpu_samples": 154,
+    "top_inclusive_frames": [
+      [
+        "org/apache/catalina/connector/CoyoteAdapter.service",
+        11
+      ],
+      [
+        "org/apache/catalina/core/StandardHostValve.invoke",
+        10
+      ],
+      [
+        "org/apache/coyote/http11/Http11Processor.service",
+        10
+      ],
+      [
+        "org/apache/catalina/authenticator/AuthenticatorBase.invoke",
+        10
+      ],
+      [
+        "org/apache/catalina/connector/CoyoteAdapter.postParseRequest",
+        10
+      ],
+      [
+        "org/springframework/security/web/ObservationFilterChainDecorator$ObservationFilter.wrapFilter",
+        8
+      ],
+      [
+        "org/apache/coyote/AbstractProtocol$ConnectionHandler.process",
+        8
+      ],
+      [
+        "org/apache/catalina/core/StandardContextValve.invoke",
+        8
+      ],
+      [
+        "io/micrometer/core/instrument/observation/DefaultMeterObservationHandler.onEvent",
+        7
+      ],
+      [
+        "org/springframework/security/web/ObservationFilterChainDecorator$VirtualFilterChain.doFilter",
+        7
+      ],
+      [
+        "org/apache/catalina/core/StandardEngineValve.invoke",
+        7
+      ],
+      [
+        "org/apache/catalina/valves/ErrorReportValve.invoke",
+        7
+      ],
+      [
+        "org/apache/coyote/AbstractProcessorLight.process",
+        7
+      ],
+      [
+        "org/springframework/security/web/ObservationFilterChainDecorator$ObservationFilter.doFilter",
+        6
+      ],
+      [
+        "org/springframework/web/filter/OncePerRequestFilter.doFilter",
+        6
+      ],
+      [
+        "java/util/HashMap.getNode",
+        5
+      ],
+      [
+        "dev/typeahead/core/TrieIndex.prefix",
+        4
+      ],
+      [
+        "dev/typeahead/core/TrieIndex.prefixExcluding",
+        4
+      ],
+      [
+        "java/lang/invoke/Invokers$Holder.linkToTargetMethod",
+        4
+      ],
+      [
+        "io/micrometer/common/KeyValues.of",
+        4
+      ]
+    ],
+    "park_top_frames": []
+  },
+  "06-coordinator-short-prefix-500": {
+    "stages_over_1ms": {},
+    "monitor_events": {},
+    "cpu_samples": 1,
+    "top_inclusive_frames": [
+      [
+        "io/micrometer/observation/SimpleObservation.stop",
+        1
+      ],
+      [
+        "java.lang.invoke.LambdaForm$MH+0x000000780100d800/835227336.invoke",
+        1
+      ],
+      [
+        "java/lang/invoke/Invokers$Holder.linkToTargetMethod",
+        1
+      ],
+      [
+        "org/springframework/scheduling/support/DefaultScheduledTaskObservationConvention.getContextualName",
+        1
+      ]
+    ],
+    "park_top_frames": []
+  },
+  "07-coordinator-fuzzy-500": {
+    "stages_over_1ms": {},
+    "monitor_events": {
+      "dev/typeahead/Corpus": {
+        "count": 152,
+        "sum_ms": 33716.656584,
+        "p50_ms": 196.986,
+        "p99_ms": 528.4395830000001,
+        "max_ms": 595.032375
+      }
+    },
+    "cpu_samples": 81,
+    "top_inclusive_frames": [
+      [
+        "java/lang/String.replaceAll",
+        6
+      ],
+      [
+        "java/util/HashMap.getNode",
+        5
+      ],
+      [
+        "java/util/HashMap.get",
+        5
+      ],
+      [
+        "org/apache/catalina/core/StandardWrapperValve.invoke",
+        5
+      ],
+      [
+        "org/apache/catalina/authenticator/AuthenticatorBase.invoke",
+        5
+      ],
+      [
+        "org/apache/coyote/http11/Http11Processor.service",
+        4
+      ],
+      [
+        "org/apache/coyote/AbstractProcessorLight.process",
+        4
+      ],
+      [
+        "org/apache/tomcat/util/threads/ThreadPoolExecutor.runWorker",
+        4
+      ],
+      [
+        "org/apache/tomcat/util/threads/ThreadPoolExecutor$Worker.run",
+        4
+      ],
+      [
+        "org/apache/coyote/AbstractProtocol$ConnectionHandler.process",
+        4
+      ],
+      [
+        "dev/typeahead/ShardEndpoint.query",
+        4
+      ],
+      [
+        "dev/typeahead/core/Normalizer.normalize",
+        4
+      ],
+      [
+        "java/util/regex/Pattern.<init>",
+        4
+      ],
+      [
+        "java/util/regex/Pattern.compile",
+        4
+      ],
+      [
+        "org/apache/catalina/core/StandardHostValve.invoke",
+        4
+      ],
+      [
+        "org/apache/catalina/core/StandardContextValve.invoke",
+        4
+      ],
+      [
+        "org/springframework/web/servlet/FrameworkServlet.processRequest",
+        3
+      ],
+      [
+        "io/micrometer/observation/SimpleObservation.event",
+        3
+      ],
+      [
+        "org/springframework/security/web/header/HeaderWriterFilter.doHeadersAfter",
+        3
+      ],
+      [
+        "org/springframework/http/server/ServletServerHttpRequest.getHeaders",
+        3
+      ]
+    ],
+    "park_top_frames": []
+  },
+  "08-local-cache-hit-1000": {
+    "stages_over_1ms": {},
+    "monitor_events": {},
+    "cpu_samples": 8,
+    "top_inclusive_frames": [
+      [
+        "org/springframework/scheduling/support/ScheduledMethodRunnable.run",
+        3
+      ],
+      [
+        "org/springframework/scheduling/config/Task$OutcomeTrackingRunnable.run",
+        2
+      ],
+      [
+        "io/micrometer/observation/docs/ObservationDocumentation.observation",
+        2
+      ],
+      [
+        "jdk/internal/net/http/HttpClientImpl$SelectorManager.run",
+        2
+      ],
+      [
+        "java/util/concurrent/Executors$RunnableAdapter.call",
+        2
+      ],
+      [
+        "io/micrometer/observation/Observation.createNotStarted",
+        1
+      ],
+      [
+        "io/micrometer/observation/ObservationRegistry$ObservationConfig.getObservationConvention",
+        1
+      ],
+      [
+        "org/postgresql/jdbc/PgConnection.setAutoCommit",
+        1
+      ],
+      [
+        "com/zaxxer/hikari/pool/ProxyConnection.setAutoCommit",
+        1
+      ],
+      [
+        "org/springframework/transaction/support/AbstractPlatformTransactionManager.startTransaction",
+        1
+      ],
+      [
+        "com/zaxxer/hikari/pool/HikariProxyConnection.setAutoCommit",
+        1
+      ],
+      [
+        "org/springframework/jdbc/datasource/DataSourceTransactionManager.doBegin",
+        1
+      ],
+      [
+        "jdk/internal/net/http/HttpClientImpl.purgeTimeoutsAndReturnNextDeadline",
+        1
+      ],
+      [
+        "io/micrometer/common/KeyValues$ArrayIterator.next",
+        1
+      ],
+      [
+        "io/micrometer/observation/SimpleObservation.stop",
+        1
+      ],
+      [
+        "io/micrometer/observation/Observation.observe",
+        1
+      ],
+      [
+        "io/micrometer/observation/Observation$Context.addHighCardinalityKeyValues",
+        1
+      ],
+      [
+        "java/util/concurrent/FutureTask.runAndReset",
+        1
+      ],
+      [
+        "org.apache.coyote.AbstractProtocol$$Lambda+0x00000078018d5e78/449528322.run",
+        1
+      ],
+      [
+        "java/util/concurrent/ScheduledThreadPoolExecutor$ScheduledFutureTask.run",
+        1
+      ]
+    ],
+    "park_top_frames": []
+  },
+  "09-coordinator-cache-hit-1000": {
+    "stages_over_1ms": {},
+    "monitor_events": {},
+    "cpu_samples": 3,
+    "top_inclusive_frames": [
+      [
+        "org/springframework/web/servlet/FrameworkServlet.processRequest",
+        1
+      ],
+      [
+        "org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.supports",
+        1
+      ],
+      [
+        "org/springframework/web/servlet/DispatcherServlet.getHandlerAdapter",
+        1
+      ],
+      [
+        "org/springframework/web/servlet/DispatcherServlet.doService",
+        1
+      ],
+      [
+        "org/springframework/web/servlet/DispatcherServlet.doDispatch",
+        1
+      ],
+      [
+        "java/util/concurrent/Executors$RunnableAdapter.call",
+        1
+      ],
+      [
+        "org/apache/catalina/core/ContainerBase$ContainerBackgroundProcessor.processChildren",
+        1
+      ],
+      [
+        "org/apache/catalina/core/ContainerBase.backgroundProcess",
+        1
+      ],
+      [
+        "org/apache/catalina/core/ContainerBase.getClusterInternal",
+        1
+      ],
+      [
+        "org/apache/catalina/core/ContainerBase$ContainerBackgroundProcessor.run",
+        1
+      ],
+      [
+        "jdk/jfr/internal/periodic/FlushTask.execute",
+        1
+      ],
+      [
+        "jdk/jfr/internal/PlatformRecorder.periodicTask",
+        1
+      ],
+      [
+        "jdk/jfr/internal/PlatformRecorder.lambda$startDiskMonitor$1",
+        1
+      ],
+      [
+        "jdk/jfr/internal/periodic/PeriodicEvents.doPeriodic",
+        1
+      ],
+      [
+        "jdk/jfr/internal/periodic/PeriodicTask.run",
+        1
+      ]
+    ],
+    "park_top_frames": []
+  },
+  "10-coordinator-mixed-500-updates": {
+    "stages_over_1ms": {},
+    "monitor_events": {
+      "dev/typeahead/Corpus": {
+        "count": 120,
+        "sum_ms": 26361.503292999998,
+        "p50_ms": 120.054834,
+        "p99_ms": 806.233167,
+        "max_ms": 828.6309170000001
+      }
+    },
+    "cpu_samples": 75,
+    "top_inclusive_frames": [
+      [
+        "dev/typeahead/core/TrieIndex.offer",
+        18
+      ],
+      [
+        "dev/typeahead/core/TrieIndex.build",
+        18
+      ],
+      [
+        "java/lang/String.replaceAll",
+        15
+      ],
+      [
+        "dev/typeahead/core/TrieIndex.<init>",
+        12
+      ],
+      [
+        "java/util/regex/Matcher.replaceAll",
+        11
+      ],
+      [
+        "dev.typeahead.core.TrieIndex$$Lambda+0x0000007801929770/486382341.applyAsDouble",
+        10
+      ],
+      [
+        "dev/typeahead/core/TrieIndex.lambda$new$1",
+        10
+      ],
+      [
+        "java/lang/Math.log1p",
+        10
+      ],
+      [
+        "java/lang/StrictMath.log1p",
+        10
+      ],
+      [
+        "dev/typeahead/core/Normalizer.normalize",
+        10
+      ],
+      [
+        "dev/typeahead/Corpus.refresh",
+        8
+      ],
+      [
+        "dev/typeahead/Corpus.applyRevision",
+        8
+      ],
+      [
+        "java/util/regex/Matcher.search",
+        8
+      ],
+      [
+        "java/util/regex/Matcher.find",
+        8
+      ],
+      [
+        "java/util/regex/Pattern$Start.match",
+        8
+      ],
+      [
+        "java/lang/FdLibm$Log1p.compute",
+        8
+      ],
+      [
+        "java/util/regex/Pattern.<init>",
+        7
+      ],
+      [
+        "java/util/regex/Pattern.compile",
+        7
+      ],
+      [
+        "java/util/HashMap.put",
+        7
+      ],
+      [
+        "java/util/HashMap.putVal",
+        6
+      ]
+    ],
+    "park_top_frames": []
+  }
+}

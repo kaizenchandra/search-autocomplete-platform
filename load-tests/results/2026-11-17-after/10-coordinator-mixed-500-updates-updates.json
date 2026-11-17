@@ -1,0 +1,13 @@
+{
+  "requested_update_rps": 20,
+  "committed_updates": 259,
+  "elapsed_seconds": 16.381953249998332,
+  "achieved_update_rps": 15.810080522603515,
+  "commit_p50_ms": 7.101709001290146,
+  "commit_p99_ms": 407.72350000042934,
+  "visibility_samples": 15,
+  "not_visible_within_3s": 1,
+  "visibility_completed_p50_ms": 299.27895800028637,
+  "visibility_completed_max_ms": 761.3344579986006,
+  "visibility_note": "Completed samples only; one censored sample exceeded three seconds, so no overall visibility p99 is established."
+}

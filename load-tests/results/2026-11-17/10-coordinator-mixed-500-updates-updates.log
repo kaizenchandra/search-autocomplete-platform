@@ -1,0 +1,1 @@
+{"requested_update_rps": 20, "committed_updates": 257, "elapsed_seconds": 15.049443542000517, "achieved_update_rps": 17.077043365939435, "commit_p50_ms": 8.018208998691989, "commit_p99_ms": 172.58362499705981}

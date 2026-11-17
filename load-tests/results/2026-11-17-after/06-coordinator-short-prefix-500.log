@@ -1,0 +1,112 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Volumes/KaizenChandra/Workspace/01-Interview/system-design/system-design/search-autocomplete-platform/load-tests/autocomplete.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 300 max VUs, 15s max duration (incl. graceful stop):
+              * search: 500.00 iterations/s for 10s (maxVUs: 100-300, gracefulStop: 5s)
+
+
+running (00.9s), 007/100 VUs, 468 complete and 0 interrupted iterations
+search   [   9% ] 007/100 VUs  00.9s/10s  500.00 iters/s
+
+running (01.9s), 001/100 VUs, 973 complete and 0 interrupted iterations
+search   [  19% ] 001/100 VUs  01.9s/10s  500.00 iters/s
+
+running (02.9s), 003/100 VUs, 1471 complete and 0 interrupted iterations
+search   [  29% ] 003/100 VUs  02.9s/10s  500.00 iters/s
+
+running (03.9s), 003/100 VUs, 1971 complete and 0 interrupted iterations
+search   [  39% ] 003/100 VUs  03.9s/10s  500.00 iters/s
+
+running (04.9s), 001/100 VUs, 2473 complete and 0 interrupted iterations
+search   [  49% ] 001/100 VUs  04.9s/10s  500.00 iters/s
+
+running (05.9s), 001/100 VUs, 2973 complete and 0 interrupted iterations
+search   [  59% ] 001/100 VUs  05.9s/10s  500.00 iters/s
+
+running (06.9s), 002/100 VUs, 3472 complete and 0 interrupted iterations
+search   [  69% ] 002/100 VUs  06.9s/10s  500.00 iters/s
+
+running (07.9s), 001/100 VUs, 3973 complete and 0 interrupted iterations
+search   [  79% ] 001/100 VUs  07.9s/10s  500.00 iters/s
+
+running (08.9s), 008/100 VUs, 4467 complete and 0 interrupted iterations
+search   [  89% ] 008/100 VUs  08.9s/10s  500.00 iters/s
+
+running (09.9s), 001/100 VUs, 4973 complete and 0 interrupted iterations
+search   [  99% ] 001/100 VUs  09.9s/10s  500.00 iters/s
+
+
+  █ THRESHOLDS 
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+    response_status{status:0}
+    ✓ 'count>=0' count=0
+
+    response_status{status:200}
+    ✓ 'count>=0' count=5001
+
+    response_status{status:429}
+    ✓ 'count>=0' count=0
+
+    response_status{status:500}
+    ✓ 'count>=0' count=0
+
+    response_status{status:503}
+    ✓ 'count>=0' count=0
+
+    successful_latency
+    ✓ 'p(99)<50' p(99)=38.34ms
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 10002   998.688385/s
+    checks_succeeded...: 100.00% 10002 out of 10002
+    checks_failed......: 0.00%   0 out of 10002
+
+    ✓ bounded valid response
+    ✓ status 200
+
+    CUSTOM
+    response_status................: 5001   499.344193/s
+      { status:0 }.................: 0      0/s
+      { status:200 }...............: 5001   499.344193/s
+      { status:429 }...............: 0      0/s
+      { status:500 }...............: 0      0/s
+      { status:503 }...............: 0      0/s
+    successful_latency.............: avg=4.73ms min=318µs    med=2.24ms p(95)=16.98ms p(99)=38.34ms max=92.85ms
+    successful_requests............: 5001   499.344193/s
+    zero_results...................: 0.00%  0 out of 5001
+
+    HTTP
+    http_req_duration..............: avg=4.73ms min=318µs    med=2.24ms p(95)=16.98ms p(99)=38.34ms max=92.85ms
+      { expected_response:true }...: avg=4.73ms min=318µs    med=2.24ms p(95)=16.98ms p(99)=38.34ms max=92.85ms
+    http_req_failed................: 0.00%  0 out of 5001
+    http_reqs......................: 5001   499.344193/s
+
+    EXECUTION
+    iteration_duration.............: avg=4.99ms min=388.08µs med=2.54ms p(95)=17.19ms p(99)=38.5ms  max=93.04ms
+    iterations.....................: 5001   499.344193/s
+    vus............................: 1      min=0         max=8  
+    vus_max........................: 100    min=100       max=100
+
+    NETWORK
+    data_received..................: 8.2 MB 815 kB/s
+    data_sent......................: 670 kB 67 kB/s
+
+
+
+
+running (10.0s), 000/100 VUs, 5001 complete and 0 interrupted iterations
+search ✓ [ 100% ] 000/100 VUs  10s  500.00 iters/s

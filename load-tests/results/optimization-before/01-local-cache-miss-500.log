@@ -1,0 +1,114 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /Volumes/KaizenChandra/Workspace/01-Interview/system-design/system-design/search-autocomplete-platform/load-tests/autocomplete.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 300 max VUs, 15s max duration (incl. graceful stop):
+              * search: 500.00 iterations/s for 10s (maxVUs: 100-300, gracefulStop: 5s)
+
+
+running (01.0s), 003/100 VUs, 490 complete and 0 interrupted iterations
+search   [  10% ] 003/100 VUs  01.0s/10s  500.00 iters/s
+
+running (02.0s), 001/100 VUs, 992 complete and 0 interrupted iterations
+search   [  20% ] 001/100 VUs  02.0s/10s  500.00 iters/s
+
+running (03.0s), 001/100 VUs, 1492 complete and 0 interrupted iterations
+search   [  30% ] 001/100 VUs  03.0s/10s  500.00 iters/s
+
+running (04.0s), 000/100 VUs, 1993 complete and 0 interrupted iterations
+search   [  40% ] 000/100 VUs  04.0s/10s  500.00 iters/s
+
+running (05.0s), 008/100 VUs, 2485 complete and 0 interrupted iterations
+search   [  50% ] 008/100 VUs  05.0s/10s  500.00 iters/s
+
+running (06.0s), 016/100 VUs, 2977 complete and 0 interrupted iterations
+search   [  60% ] 016/100 VUs  06.0s/10s  500.00 iters/s
+
+running (07.0s), 006/101 VUs, 3485 complete and 0 interrupted iterations
+search   [  70% ] 006/101 VUs  07.0s/10s  500.00 iters/s
+
+running (08.0s), 105/105 VUs, 3652 complete and 0 interrupted iterations
+search   [  80% ] 105/105 VUs  08.0s/10s  500.00 iters/s
+
+running (09.0s), 003/127 VUs, 4191 complete and 0 interrupted iterations
+search   [  90% ] 003/127 VUs  09.0s/10s  500.00 iters/s
+
+running (10.0s), 005/127 VUs, 4689 complete and 0 interrupted iterations
+search   [ 100% ] 005/127 VUs  10.0s/10s  500.00 iters/s
+
+
+  █ THRESHOLDS 
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+    response_status{status:0}
+    ✓ 'count>=0' count=0
+
+    response_status{status:200}
+    ✓ 'count>=0' count=4701
+
+    response_status{status:429}
+    ✓ 'count>=0' count=0
+
+    response_status{status:500}
+    ✓ 'count>=0' count=0
+
+    response_status{status:503}
+    ✓ 'count>=0' count=0
+
+    successful_latency
+    ✗ 'p(99)<50' p(99)=787.44ms
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 9402    940.036434/s
+    checks_succeeded...: 100.00% 9402 out of 9402
+    checks_failed......: 0.00%   0 out of 9402
+
+    ✓ bounded valid response
+    ✓ status 200
+
+    CUSTOM
+    response_status................: 4701   470.018217/s
+      { status:0 }.................: 0      0/s
+      { status:200 }...............: 4701   470.018217/s
+      { status:429 }...............: 0      0/s
+      { status:500 }...............: 0      0/s
+      { status:503 }...............: 0      0/s
+    successful_latency.............: avg=44.38ms min=481µs    med=11.87ms p(95)=158.55ms p(99)=787.44ms max=865.5ms 
+    successful_requests............: 4701   470.018217/s
+    zero_results...................: 0.00%  0 out of 4701
+
+    HTTP
+    http_req_duration..............: avg=44.38ms min=481µs    med=11.87ms p(95)=158.55ms p(99)=787.44ms max=865.5ms 
+      { expected_response:true }...: avg=44.38ms min=481µs    med=11.87ms p(95)=158.55ms p(99)=787.44ms max=865.5ms 
+    http_req_failed................: 0.00%  0 out of 4701
+    http_reqs......................: 4701   470.018217/s
+
+    EXECUTION
+    dropped_iterations.............: 299    29.894798/s
+    iteration_duration.............: avg=44.82ms min=536.45µs med=12.36ms p(95)=159ms    p(99)=787.66ms max=865.68ms
+    iterations.....................: 4701   470.018217/s
+    vus............................: 5      min=0         max=106
+    vus_max........................: 127    min=100       max=127
+
+    NETWORK
+    data_received..................: 2.6 MB 261 kB/s
+    data_sent......................: 729 kB 73 kB/s
+
+
+
+
+running (10.0s), 000/127 VUs, 4701 complete and 0 interrupted iterations
+search ✓ [ 100% ] 000/127 VUs  10s  500.00 iters/s
+time="2026-11-17T18:59:16+05:30" level=error msg="thresholds on metrics 'successful_latency' have been crossed"

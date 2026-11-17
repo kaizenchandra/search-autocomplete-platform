@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/autocomplete}
+    username: ${DATABASE_USER:autocomplete}
+    password: ${DATABASE_PASSWORD:local-demo-only}
+    hikari:
+      connection-timeout: 1000
+      maximum-pool-size: 10
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      connect-timeout: 50ms
+      timeout: 50ms
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: ${JWK_SET_URI:http://localhost:9090/realms/autocomplete/protocol/openid-connect/certs}
+server:
+  shutdown: graceful
+  max-http-request-header-size: 16KB
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus

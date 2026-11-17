@@ -1,0 +1,29 @@
+# docker compose -f compose.yml -f compose.shards.yml up --build
+x-worker: &worker
+  build: backend
+  depends_on:
+    postgres: {condition: service_healthy}
+    redis: {condition: service_started}
+services:
+  api:
+    environment:
+      INDEX_SHARDS: '2'
+      INDEX_SHARD_ID: '-2'
+      INDEX_WORKERS: http://shard-0:8080,http://shard-1:8080
+      INDEX_INTERNAL_SECRET: ${INDEX_INTERNAL_SECRET:-local-demo-internal-shard-secret-minimum-32}
+  shard-0:
+    <<: *worker
+    environment:
+      DATABASE_URL: jdbc:postgresql://postgres:5432/autocomplete
+      REDIS_HOST: redis
+      INDEX_SHARDS: '2'
+      INDEX_SHARD_ID: '0'
+      INDEX_INTERNAL_SECRET: ${INDEX_INTERNAL_SECRET:-local-demo-internal-shard-secret-minimum-32}
+  shard-1:
+    <<: *worker
+    environment:
+      DATABASE_URL: jdbc:postgresql://postgres:5432/autocomplete
+      REDIS_HOST: redis
+      INDEX_SHARDS: '2'
+      INDEX_SHARD_ID: '1'
+      INDEX_INTERNAL_SECRET: ${INDEX_INTERNAL_SECRET:-local-demo-internal-shard-secret-minimum-32}
